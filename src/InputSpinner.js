@@ -89,6 +89,18 @@ class InputSpinner extends Component {
 		};
 	}
 
+    UNSAFE_componentWillReceiveProps(nextProps) {
+		const { value, min, max} = nextProps;
+        let pValue = this._parseNum(value);
+		pValue = this._withinRange(pValue, min, max);
+
+		if (pValue !== this.state.value) {
+			this.setState({
+				value: pValue
+			});
+		}
+    }
+
 	/**
 	 * Component did update
 	 * @param prevProps

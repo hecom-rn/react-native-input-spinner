@@ -8,7 +8,7 @@ export const getProps = (props) => {
 			minWidth: 150,
 			maxWidth: 150,
 		}),
-		shadow: props.shadow ? props.shadow : true,
+		// shadow: props.shadow ? props.shadow : true,
 		width: props.width ? props.width : 150,
 		colorAsBackground: true,
 		color: colorFallback,

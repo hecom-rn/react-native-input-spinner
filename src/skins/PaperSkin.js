@@ -7,7 +7,7 @@ export const getProps = (props) => {
 	return {
 		style: mergeViewStyle(props.style, {padding: 10, borderRadius: 3}),
 		height: props.height ? props.height : 30,
-		shadow: props.shadow ? props.shadow : true,
+		// shadow: props.shadow ? props.shadow : true,
 		background: props.background ? props.background : "#FFF",
 		color: colorFallback,
 		colorPress: props.colorPress ? props.colorPress : colorPressFallback,
