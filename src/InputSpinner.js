@@ -474,8 +474,8 @@ class InputSpinner extends Component {
 		if (isNaN(num)) {
 			num = 0;
 		}
-		this._roundNum(num);
-		return num;
+		return this._roundNum(num);
+		// return num;
 	}
 
 	/**
