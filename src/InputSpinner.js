@@ -1174,7 +1174,7 @@ class InputSpinner extends Component {
 			{
 				color: this._isLeftButtonPressed()
 					? this._getColorPressText()
-					: this._getColorText(),
+					: (this.props.buttonLeftTextColor || this._getColorText()),
 			},
 			this._isLeftButtonPressed() ? this.props.buttonPressTextStyle : {},
 		];
@@ -1192,7 +1192,7 @@ class InputSpinner extends Component {
 			{
 				color: this._isRightButtonPressed()
 					? this._getColorPressText()
-					: this._getColorText(),
+					: (this.props.buttonRightTextColor || this._getColorText()),
 			},
 			this._isRightButtonPressed() ? this.props.buttonPressTextStyle : {},
 		];
@@ -1399,6 +1399,8 @@ InputSpinner.propTypes = {
 	buttonFontSize: PropTypes.number,
 	buttonFontFamily: PropTypes.string,
 	buttonTextColor: PropTypes.string,
+	buttonLeftTextColor: PropTypes.string,
+	buttonRightTextColor: PropTypes.string,
 	maxLength: PropTypes.number,
 	disabled: PropTypes.bool,
 	editable: PropTypes.bool,
@@ -1508,6 +1510,8 @@ InputSpinner.defaultProps = {
 	buttonFontSize: 25,
 	buttonFontFamily: defaultFont,
 	buttonTextColor: null,
+	buttonLeftTextColor: null,
+	buttonRightTextColor: null,
 	buttonPressTextColor: null,
 	maxLength: null,
 	disabled: false,
