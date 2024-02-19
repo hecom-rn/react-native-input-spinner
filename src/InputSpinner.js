@@ -424,7 +424,7 @@ class InputSpinner extends Component {
 				fraction = -0.6;
 			}
 			val =
-				Math.round(parseInt(val) + fraction) /
+				Math.floor(parseInt(val) + fraction) /
 				Math.pow(10, this.props.precision);
 			return val;
 		}
